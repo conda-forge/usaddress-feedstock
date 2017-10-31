@@ -1,18 +1,17 @@
-{% set version = "0.5.7" %}
-
+{% set version = "0.5.10" %}
+{% set sha =  "1a8ebf62d0cce58d7d8286dde70373c530a9317b6fe1752a4197b75b7d0870e3" %}
 package:
     name: usaddress
     version: {{ version }}
 
 source:
     fn: usaddress-{{ version }}.tar.gz
-    url: https://pypi.python.org/packages/source/u/usaddress/usaddress-{{ version }}.tar.gz
-    md5: e8bf0abfbf88f9795e997c3ceaf313b1
+    url: https://pypi.io/packages/source/u/usaddress/usaddress-{{ version }}.tar.gz
+    sha256: {{ sha }}
 
 build:
     number: 1
     script: python setup.py install --single-version-externally-managed --record record.txt
-    skip: True  # [win and py35]
 
 requirements:
     build:
