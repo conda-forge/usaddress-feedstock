@@ -1,5 +1,6 @@
 {% set version = "0.5.10" %}
-{% set sha =  "1a8ebf62d0cce58d7d8286dde70373c530a9317b6fe1752a4197b75b7d0870e3" %}
+{% set sha = "1a8ebf62d0cce58d7d8286dde70373c530a9317b6fe1752a4197b75b7d0870e3" %}
+
 package:
     name: usaddress
     version: {{ version }}
