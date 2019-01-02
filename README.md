@@ -16,9 +16,8 @@ Summary: Parse US addresses using conditional random fields
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/usaddress-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/usaddress-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/usaddress-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/usaddress-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/usaddress-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/usaddress-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/usaddress-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/usaddress-feedstock)
 
 Current release info
 ====================
