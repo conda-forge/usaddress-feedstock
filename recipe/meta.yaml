@@ -1,5 +1,6 @@
 {% set version = "0.5.10" %}
-{% set sha =  "1a8ebf62d0cce58d7d8286dde70373c530a9317b6fe1752a4197b75b7d0870e3" %}
+{% set sha = "1a8ebf62d0cce58d7d8286dde70373c530a9317b6fe1752a4197b75b7d0870e3" %}
+
 package:
     name: usaddress
     version: {{ version }}
@@ -10,14 +11,14 @@ source:
     sha256: {{ sha }}
 
 build:
-    number: 1
-    script: python setup.py install --single-version-externally-managed --record record.txt
+    number: 1001
+    noarch: python
+    script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
-    build:
+    host:
         - python
-        - setuptools
-
+        - pip
     run:
         - python
         - requests
