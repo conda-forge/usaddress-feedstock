@@ -1,42 +1,43 @@
-{% set version = "0.5.10" %}
-{% set sha = "1a8ebf62d0cce58d7d8286dde70373c530a9317b6fe1752a4197b75b7d0870e3" %}
+{% set version = "0.5.11" %}
+{% set sha = "eec4c473b94e2a29350ee335f18bac7fe4fa698e08271211dad5fed63bdd3e60" %}
 
 package:
-    name: usaddress
-    version: {{ version }}
+  name: usaddress
+  version: {{ version }}
 
 source:
-    fn: usaddress-{{ version }}.tar.gz
-    url: https://pypi.io/packages/source/u/usaddress/usaddress-{{ version }}.tar.gz
-    sha256: {{ sha }}
+  fn: usaddress-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/u/usaddress/usaddress-{{ version }}.tar.gz
+  sha256: {{ sha }}
 
 build:
-    number: 1001
-    noarch: python
-    script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
-    host:
-        - python
-        - pip
-    run:
-        - python
-        - requests
-        - future
-        - python-crfsuite
-        - probableparsing
-        - metaphone
+  host:
+    - python
+    - pip
+  run:
+    - python
+    - requests
+    - future
+    - python-crfsuite
+    - probableparsing
+    - metaphone
 
 test:
-    imports:
-        - usaddress
+  imports:
+    - usaddress
 
 about:
-    home: https://github.com/datamade/usaddress
-    license: MIT
-    license_family: MIT
-    summary: Parse US addresses using conditional random fields
+  home: https://github.com/datamade/usaddress
+  license: MIT
+  license_file: LICENSE
+  license_family: MIT
+  summary: Parse US addresses using conditional random fields
 
 extra:
-    recipe-maintainers:
-        - wyseguy7
+  recipe-maintainers:
+    - wyseguy7
