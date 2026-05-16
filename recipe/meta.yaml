@@ -1,6 +1,8 @@
 {% set version = "0.5.16" %}
 {% set sha = "ce2bd73e3a41176fa29f093e9ad153327a87862430f1b0b121f0cb230c182a6a" %}
-{% set python_min = "3.9" %}
+
+context:
+  python_min: "3.9"
 
 package:
     name: usaddress
@@ -18,10 +20,11 @@ build:
 
 requirements:
     host:
-        - python {{ python_min }}
+        - python ${{ python_min }}.*
         - pip
+        - setuptools
     run:
-        - python >={{ python_min }}
+        - python >=${{ python_min }}
         - python-crfsuite >=0.7
         - probableparsing
 
